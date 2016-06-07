@@ -19,5 +19,8 @@ services:
        - ./testDB.sql:/docker-entrypoint-initdb.d/db.sql
 #      - ./data/:/var/lib/mysql
 #      - ./data/mysql:/mysql
-#    environment:
-#      - MYSQL_ROOT_PASSWORD=password
+    environment:
+      - MYSQL_ROOT_PASSWORD=password
+      - MYSQL_DATABASE=forge
+      - MYSQL_USER=forge
+      - MYSQL_PASSWORD=
