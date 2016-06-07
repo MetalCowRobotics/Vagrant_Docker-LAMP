@@ -15,7 +15,7 @@ services:
       
   db:
     image: mysql
-    volumes:
+#    volumes:
 #      - ./data/:/var/lib/mysql
 #      - ./data/mysql:/mysql
 #    environment:
