@@ -1,6 +1,7 @@
 FROM eboraas/laravel
 MAINTAINER Krithik Rao <krdevmail@gmail.com>
-CMD ["rm","-rf","/var/www/laravel"]
+
+RUN ["rm","-rf","/var/www/laravel"]
 
 RUN /usr/local/bin/composer create-project laravel/lumen /var/www/lumen --prefer-dist
 RUN /bin/chown www-data:www-data -R /var/www/lumen/storage /var/www/lumen/bootstrap/cache
