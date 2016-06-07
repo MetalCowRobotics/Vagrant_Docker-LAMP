@@ -15,7 +15,8 @@ services:
       
   db:
     image: mysql
-#    volumes:
+    volumes:
+       - ./testDB.sql:/docker-entrypoint-initdb.d/db.sql
 #      - ./data/:/var/lib/mysql
 #      - ./data/mysql:/mysql
 #    environment:
