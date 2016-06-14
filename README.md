@@ -9,12 +9,11 @@
 
 <br>
 ## Setup
-1. Run ````git clone https://github.com/MetalCowRobotics/Vagrant_Docker-LAMP.git```` or Download this Repo to the Directory you want to Create your Project Directory in
-2. Change the name of the ````Vagrant_Docker-LAMP```` Directory to ````Your Project Name````
-3. Enter the Directory
-4. Run ````vagrant up````
-5. Wait for the VM to Start Up ....
-6. Happy Coding + Testing
+1. Run ````git clone https://github.com/MetalCowRobotics/Vagrant_Docker-LAMP.git <project name> && cd <project name> && git submodule init && git submodule update --remote```` or Download this Repo to the Directory you want to Create your Project Directory in
+2. Enter the Directory
+3. Run ````vagrant up````
+4. Wait for the VM to Start Up ....
+5. Happy Coding + Testing
 
 ( Windows Users : Using Git Shell is Recommended )
 
