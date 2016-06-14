@@ -9,13 +9,12 @@
 
 <br>
 ## Setup
-1. Run ````git clone https://github.com/MetalCowRobotics/Vagrant_Docker-LAMP.git <project name> && cd <project name> && git submodule init && git submodule update --remote```` or Download this Repo to the Directory you want to Create your Project Directory in
-2. Enter the Directory
-3. Run ````vagrant up````
-4. Wait for the VM to Start Up ....
-5. Happy Coding + Testing
+1. Run ````git clone https://github.com/MetalCowRobotics/Vagrant_Docker-LAMP.git <project name> && cd <project name> && git submodule init && git submodule update --remote```` in a Bash Shell
+2. Run ````vagrant up```` when you want to start the VM
+3. Wait for the VM to Start Up ....
+4. Happy Coding + Testing
 
-( Windows Users : Using Git Shell is Recommended )
+( Windows Users : Using Git Shell for Bash is Recommended )
 
 <br>
 ## General How to Use
