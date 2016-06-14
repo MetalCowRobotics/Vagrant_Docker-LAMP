@@ -7,20 +7,25 @@ services:
     depends_on:
       - db
     volumes:
-      - ./src:/var/www/laravel/app
-    environment:
-      - APP_ENV=test
-      - APP_DEBUG=true
-      - APP_KEY=zQ,3]zy3f`zH:sEvi0HCnVYPw#*@/xUt
+      - ./src/app:/var/www/laravel/app
+      - ./src/resources:/var/www/laravel/resources
+      - ./src/database:/var/www/laravel/database
+      - ./src/tests:/var/www/laravel/tests
+      - ./src/.env:/var/www/laravel/.env
+    links:
+      - db
       
   db:
     image: mysql
-    volumes:
-       - ./testDB.sql:/docker-entrypoint-initdb.d/db.sql
+    expose:
+      - "3306"
+
+#   volumes:
+#      - ./testDB.sql:/docker-entrypoint-initdb.d/db.sql
 #      - ./data/:/var/lib/mysql
 #      - ./data/mysql:/mysql
     environment:
       - MYSQL_ROOT_PASSWORD=password
       - MYSQL_DATABASE=forge
       - MYSQL_USER=forge
-      - MYSQL_PASSWORD=
+      - MYSQL_PASSWORD=password
