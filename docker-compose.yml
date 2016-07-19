@@ -1,9 +1,9 @@
 version: '2'
 services:
   web:
-    image: eboraas/laravel
+    image: kritr/laravel
     ports:
-      - "80:80"
+      - "8090:80"
     depends_on:
       - db
     volumes:
@@ -11,10 +11,12 @@ services:
       - ./src/resources:/var/www/laravel/resources
       - ./src/database:/var/www/laravel/database
       - ./src/tests:/var/www/laravel/tests
+      - ./src/config:/var/www/laravel/config
       - ./src/.env:/var/www/laravel/.env
+      - ./src/composer.json:/var/www/laravel/composer.json
     links:
       - db
-      
+    command: bash -c "composer update -d /var/www/laravel/ --no-scripts ; composer install -d /var/www/laravel/ ; until php /var/www/laravel/artisan migrate ; do echo 'Retrying Migration' ; done ; /usr/sbin/apache2ctl -D FOREGROUND" 
   db:
     image: mysql
     expose:
