@@ -12,6 +12,7 @@ services:
       - ./src/database:/var/www/laravel/database
       - ./src/tests:/var/www/laravel/tests
       - ./src/config:/var/www/laravel/config
+      - ./src/public:/var/www/laravel/public
       - ./src/.env:/var/www/laravel/.env
       - ./src/composer.json:/var/www/laravel/composer.json
     links:
