@@ -3,7 +3,7 @@ services:
   web:
     image: kritr/laravel
     ports:
-      - "8080:80"
+      - "8090:80"
     depends_on:
       - db
     volumes:

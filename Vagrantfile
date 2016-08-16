@@ -72,6 +72,6 @@ Vagrant.configure(2) do |config|
     d.pull_images "eboraas/laravel"
     d.pull_images "mysql"
   end
-  config.vm.network "forwarded_port", guest: 80, host: 8080
+  config.vm.network "forwarded_port", guest: 8090, host: 8080
   config.vm.provision "shell", path: "docker_start.sh"
 end
