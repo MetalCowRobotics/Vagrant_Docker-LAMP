@@ -9,7 +9,7 @@
 
 <br>
 ## Setup
-1. Run ````git clone https://github.com/MetalCowRobotics/Vagrant_Docker_Laravel <project name> && cd <project name> && git submodule init && git submodule update --remote```` in a Bash Shell
+1. Run ````git clone https://github.com/MetalCowRobotics/Vagrant_Docker_Laravel <project name> && cd <project name>```` in a Bash Shell
 2. Run ````vagrant up```` when you want to start the VM
 3. Wait for the VM to Start Up ....
 4. Happy Coding + Testing
